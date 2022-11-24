@@ -1,0 +1,873 @@
+{
+	"id": "cd869c43002941da6f8aea61bf997590",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/SVGLib.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\n\r\n\r\npragma solidity ^0.8.0;\r\n\r\n\r\nlibrary SVGLib {\r\n    string internal  constant svg_Header = \r\n        '<svg id=\"elfbOpLEU5j1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 400 425\" shape-rendering=\"geometricPrecision\" text-rendering=\"geometricPrecision\">';\r\n    string internal constant svg_Tail = '</svg>';\r\n    string internal constant svg_Type_1 =\r\n        '<g transform=\"translate(0 0.000001)\"><path d=\"M178.881,108l11.322,38.973l6.921-2.539l6.543,20.557l13.833,3.562l3.533-16.508l5.742.565l7.243-63.231-5.486-.314-3.527-23.592-15.6-1.102-6.399,25.008L191.421,78.15l-2.233,30.6-10.307-1.173\" fill=\"#f3a407\" stroke=\"rgba(63,87,135,0)\" stroke-width=\"0.85\"/><path d=\"M181.375,111.946l10.424,32.904l5.047-2.372l5.222001,11.647l1.598999-7.902l8.119,6.387-.737-8.176l11.261,4.814-14.425-24.873l7.848-22.953-6.328-37.051-6.399,25.008L191.421,78.15l-1.025,32.163-7.913-1.256\" fill=\"#e48117\" stroke=\"rgba(63,87,135,0)\" stroke-width=\"0.85\"/><path d=\"M226.775,118.296c.2.374.253,1.612.169,3.945-.195,5.435-.774,6.265-4.634,6.645-3.025.298-3.217-.334-1.277-4.203c2.901-5.784,4.884-7.99,5.742-6.387m-28.813,3.742c3.191,2.397,6.823,5.554,7.176,6.238.779,1.507-4.53,1.498-5.735,1.737-3.316.659-5.144-1.705-5.245-6.782-.057-2.847,1.113-3.214,3.804-1.193\" fill=\"rgba(7,5,5,0.94)\" fill-rule=\"evenodd\"/><path d=\"M219.22831,110.396122q.133998,0,18.98119-9.067754l-24.07419,27.574754L210.603,149.625l-12.96769-17.913878\" transform=\"translate(62.11469-42.541762)\" fill=\"#e48117\" stroke=\"rgba(63,87,135,0)\" stroke-width=\"0.85\"/><path d=\"M219.06731,119.541762q.133998,0,19.14219-18.213394l-27.95619,34.757394L210.603,149.625l-5.29469-14.943238\" transform=\"translate(62.11469-42.541762)\" fill=\"#f3a407\" stroke=\"rgba(63,87,135,0)\" stroke-width=\"0.85\"/><path d=\"M112.976,74.594999l-14.545-14.386l17.807,6.447L141.5,85.74419l-10.481,19.525809-4.062-13.707\" transform=\"translate(0 0.000001)\" fill=\"#e48117\" stroke=\"rgba(255,170,15,0)\" stroke-width=\"0.85\"/><path d=\"M119.032,78.146999l-20.601-17.938L122,75.935999L132.447,95.99419l-1.428,9.275809-.705-7.645\" transform=\"translate(0 0.000001)\" fill=\"#f3a407\" stroke=\"rgba(255,170,15,0)\" stroke-width=\"0.85\"/></g>';    \r\n   \r\n    \r\n    \r\n    function assembleString(uint256 _type) internal pure returns (bytes memory svg_Result){\r\n         \r\n            return bytes(string(abi.encodePacked(SVGLib.svg_Header, _type, SVGLib.svg_Tail))); \r\n      \r\n        \r\n    }\r\n}\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/SVGLib.sol": {
+				"SVGLib": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"contracts/SVGLib.sol\":66:2467  library SVGLib {\r... */\n  dataSize(sub_0)\n  dataOffset(sub_0)\n  0x0b\n  dup3\n  dup3\n  dup3\n  codecopy\n  dup1\n  mload\n  0x00\n  byte\n  0x73\n  eq\n  tag_1\n  jumpi\n  mstore(0x00, 0x4e487b7100000000000000000000000000000000000000000000000000000000)\n  mstore(0x04, 0x00)\n  revert(0x00, 0x24)\ntag_1:\n  mstore(0x00, address)\n  0x73\n  dup2\n  mstore8\n  dup3\n  dup2\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/SVGLib.sol\":66:2467  library SVGLib {\r... */\n      eq(address, deployTimeAddress())\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa2646970667358221220eea7b3904378cb912f42ee0e559f67b8d94ee23e5080949c88a0a95d93b95f5164736f6c63430008070033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "60566050600b82828239805160001a6073146043577f4e487b7100000000000000000000000000000000000000000000000000000000600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220eea7b3904378cb912f42ee0e559f67b8d94ee23e5080949c88a0a95d93b95f5164736f6c63430008070033",
+							"opcodes": "PUSH1 0x56 PUSH1 0x50 PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH1 0x0 BYTE PUSH1 0x73 EQ PUSH1 0x43 JUMPI PUSH32 0x4E487B7100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 MSTORE PUSH1 0x0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST ADDRESS PUSH1 0x0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xEE 0xA7 0xB3 SWAP1 NUMBER PUSH25 0xCB912F42EE0E559F67B8D94EE23E5080949C88A0A95D93B95F MLOAD PUSH5 0x736F6C6343 STOP ADDMOD SMOD STOP CALLER ",
+							"sourceMap": "66:2401:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220eea7b3904378cb912f42ee0e559f67b8d94ee23e5080949c88a0a95d93b95f5164736f6c63430008070033",
+							"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xEE 0xA7 0xB3 SWAP1 NUMBER PUSH25 0xCB912F42EE0E559F67B8D94EE23E5080949C88A0A95D93B95F MLOAD PUSH5 0x736F6C6343 STOP ADDMOD SMOD STOP CALLER ",
+							"sourceMap": "66:2401:0:-:0;;;;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "17200",
+								"executionCost": "97",
+								"totalCost": "17297"
+							},
+							"internal": {
+								"assembleString(uint256)": "infinite"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "PUSH",
+									"source": 0,
+									"value": "B"
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "MLOAD",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "BYTE",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "PUSH",
+									"source": 0,
+									"value": "73"
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "EQ",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "PUSH",
+									"source": 0,
+									"value": "4E487B7100000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "PUSH",
+									"source": 0,
+									"value": "4"
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "PUSH",
+									"source": 0,
+									"value": "24"
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "ADDRESS",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "PUSH",
+									"source": 0,
+									"value": "73"
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "MSTORE8",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 2467,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a2646970667358221220eea7b3904378cb912f42ee0e559f67b8d94ee23e5080949c88a0a95d93b95f5164736f6c63430008070033",
+									".code": [
+										{
+											"begin": 66,
+											"end": 2467,
+											"name": "PUSHDEPLOYADDRESS",
+											"source": 0
+										},
+										{
+											"begin": 66,
+											"end": 2467,
+											"name": "ADDRESS",
+											"source": 0
+										},
+										{
+											"begin": 66,
+											"end": 2467,
+											"name": "EQ",
+											"source": 0
+										},
+										{
+											"begin": 66,
+											"end": 2467,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 66,
+											"end": 2467,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 66,
+											"end": 2467,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 66,
+											"end": 2467,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 66,
+											"end": 2467,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 66,
+											"end": 2467,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/SVGLib.sol\":\"SVGLib\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/SVGLib.sol\":{\"keccak256\":\"0xe5986e493e86cba157c414c5bef3c471f93b5930b8f974f7ad22535d5c0f42ab\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fe798c9023457b9b14daecf0f49517e7cae135129aa5de0ff706ec7f496b1416\",\"dweb:/ipfs/QmWdfwhw9j1WpT549sxhGY5rkspwnbq5Dtm8DRVUkGwv2A\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/SVGLib.sol": {
+				"ast": {
+					"absolutePath": "contracts/SVGLib.sol",
+					"exportedSymbols": {
+						"SVGLib": [
+							34
+						]
+					},
+					"id": 35,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "37:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "library",
+							"fullyImplemented": true,
+							"id": 34,
+							"linearizedBaseContracts": [
+								34
+							],
+							"name": "SVGLib",
+							"nameLocation": "74:6:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"constant": true,
+									"id": 4,
+									"mutability": "constant",
+									"name": "svg_Header",
+									"nameLocation": "114:10:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 34,
+									"src": "88:247:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_string_memory_ptr",
+										"typeString": "string"
+									},
+									"typeName": {
+										"id": 2,
+										"name": "string",
+										"nodeType": "ElementaryTypeName",
+										"src": "88:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_string_storage_ptr",
+											"typeString": "string"
+										}
+									},
+									"value": {
+										"hexValue": "3c7376672069643d22656c66624f704c4555356a312220786d6c6e733d22687474703a2f2f7777772e77332e6f72672f323030302f7376672220786d6c6e733a786c696e6b3d22687474703a2f2f7777772e77332e6f72672f313939392f786c696e6b222076696577426f783d223020302034303020343235222073686170652d72656e646572696e673d2267656f6d6574726963507265636973696f6e2220746578742d72656e646572696e673d2267656f6d6574726963507265636973696f6e223e",
+										"id": 3,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "string",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "137:198:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_stringliteral_104ac35b9c7d59e6f5df45042c2490beb66a44ca7e8777a78ed8100227a8ffc5",
+											"typeString": "literal_string \"<svg id=\"elfbOpLEU5j1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 400 425\" shape-rendering=\"geometricPrecision\" text-rendering=\"geometricPrecision\">\""
+										},
+										"value": "<svg id=\"elfbOpLEU5j1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 400 425\" shape-rendering=\"geometricPrecision\" text-rendering=\"geometricPrecision\">"
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": true,
+									"id": 7,
+									"mutability": "constant",
+									"name": "svg_Tail",
+									"nameLocation": "367:8:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 34,
+									"src": "342:44:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_string_memory_ptr",
+										"typeString": "string"
+									},
+									"typeName": {
+										"id": 5,
+										"name": "string",
+										"nodeType": "ElementaryTypeName",
+										"src": "342:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_string_storage_ptr",
+											"typeString": "string"
+										}
+									},
+									"value": {
+										"hexValue": "3c2f7376673e",
+										"id": 6,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "string",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "378:8:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_stringliteral_ed942a74eccce931b7661b37252dffca8561e3a8bdec86f6da31d97d858c9292",
+											"typeString": "literal_string \"</svg>\""
+										},
+										"value": "</svg>"
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": true,
+									"id": 10,
+									"mutability": "constant",
+									"name": "svg_Type_1",
+									"nameLocation": "418:10:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 34,
+									"src": "393:1823:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_string_memory_ptr",
+										"typeString": "string"
+									},
+									"typeName": {
+										"id": 8,
+										"name": "string",
+										"nodeType": "ElementaryTypeName",
+										"src": "393:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_string_storage_ptr",
+											"typeString": "string"
+										}
+									},
+									"value": {
+										"hexValue": "3c67207472616e73666f726d3d227472616e736c617465283020302e30303030303129223e3c7061746820643d224d3137382e3838312c3130386c31312e3332322c33382e3937336c362e3932312d322e3533396c362e3534332c32302e3535376c31332e3833332c332e3536326c332e3533332d31362e3530386c352e3734322e3536356c372e3234332d36332e3233312d352e3438362d2e3331342d332e3532372d32332e3539322d31352e362d312e3130322d362e3339392c32352e3030384c3139312e3432312c37382e31356c2d322e3233332c33302e362d31302e3330372d312e313733222066696c6c3d222366336134303722207374726f6b653d22726762612836332c38372c3133352c302922207374726f6b652d77696474683d22302e3835222f3e3c7061746820643d224d3138312e3337352c3131312e3934366c31302e3432342c33322e3930346c352e3034372d322e3337326c352e3232323030312c31312e3634376c312e3539383939392d372e3930326c382e3131392c362e3338372d2e3733372d382e3137366c31312e3236312c342e3831342d31342e3432352d32342e3837336c372e3834382d32322e3935332d362e3332382d33372e3035312d362e3339392c32352e3030384c3139312e3432312c37382e31356c2d312e3032352c33322e3136332d372e3931332d312e323536222066696c6c3d222365343831313722207374726f6b653d22726762612836332c38372c3133352c302922207374726f6b652d77696474683d22302e3835222f3e3c7061746820643d224d3232362e3737352c3131382e323936632e322e3337342e3235332c312e3631322e3136392c332e3934352d2e3139352c352e3433352d2e3737342c362e3236352d342e3633342c362e3634352d332e3032352e3239382d332e3231372d2e3333342d312e3237372d342e32303363322e3930312d352e3738342c342e3838342d372e39392c352e3734322d362e3338376d2d32382e3831332c332e37343263332e3139312c322e3339372c362e3832332c352e3535342c372e3137362c362e3233382e3737392c312e3530372d342e35332c312e3439382d352e3733352c312e3733372d332e3331362e3635392d352e3134342d312e3730352d352e3234352d362e3738322d2e3035372d322e3834372c312e3131332d332e3231342c332e3830342d312e313933222066696c6c3d227267626128372c352c352c302e393429222066696c6c2d72756c653d226576656e6f6464222f3e3c7061746820643d224d3231392e32323833312c3131302e333936313232712e3133333939382c302c31382e39383131392d392e3036373735346c2d32342e30373431392c32372e3537343735344c3231302e3630332c3134392e3632356c2d31322e39363736392d31372e39313338373822207472616e73666f726d3d227472616e736c6174652836322e31313436392d34322e35343137363229222066696c6c3d222365343831313722207374726f6b653d22726762612836332c38372c3133352c302922207374726f6b652d77696474683d22302e3835222f3e3c7061746820643d224d3231392e30363733312c3131392e353431373632712e3133333939382c302c31392e31343231392d31382e3231333339346c2d32372e39353631392c33342e3735373339344c3231302e3630332c3134392e3632356c2d352e32393436392d31342e39343332333822207472616e73666f726d3d227472616e736c6174652836322e31313436392d34322e35343137363229222066696c6c3d222366336134303722207374726f6b653d22726762612836332c38372c3133352c302922207374726f6b652d77696474683d22302e3835222f3e3c7061746820643d224d3131322e3937362c37342e3539343939396c2d31342e3534352d31342e3338366c31372e3830372c362e3434374c3134312e352c38352e37343431396c2d31302e3438312c31392e3532353830392d342e3036322d31332e37303722207472616e73666f726d3d227472616e736c617465283020302e30303030303129222066696c6c3d222365343831313722207374726f6b653d2272676261283235352c3137302c31352c302922207374726f6b652d77696474683d22302e3835222f3e3c7061746820643d224d3131392e3033322c37382e3134363939396c2d32302e3630312d31372e3933384c3132322c37352e3933353939394c3133322e3434372c39352e39393431396c2d312e3432382c392e3237353830392d2e3730352d372e36343522207472616e73666f726d3d227472616e736c617465283020302e30303030303129222066696c6c3d222366336134303722207374726f6b653d2272676261283235352c3137302c31352c302922207374726f6b652d77696474683d22302e3835222f3e3c2f673e",
+										"id": 9,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "string",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "440:1776:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_stringliteral_0e1faf203cf8b2799b92b8df0b78315931ec64c0aa8e1273836c8f77ea4dc419",
+											"typeString": "literal_string \"<g transform=\"translate(0 0.000001)\"><path d=\"M178.881,108l11.322,38.973l6.921-2.539l6.543,20.557l13.833,3.562l3.533-16.508l5.742.565l7.243-63.231-5.486-.314-3.527-23.592-15.6-1.102-6.399,25.008L191.421,78.15l-2.233,30.6-10.307-1.173\" fill=\"#f3a407\" stroke=\"rgba(63,87,135,0)\" stroke-width=\"0.85\"/><path d=\"M181.375,111.946l10.424,32.904l5.047-2.372l5.222001,11.647l1.598999-7.902l8.119,6.387-.737-8.176l11.261,4.814-14.425-24.873l7.848-22.953-6.328-37.051-6.399,25.008L191.421,78.15l-1.025,32.163-7.913-1.256\" fill=\"#e48117\" stroke=\"rgba(63,87,135,0)\" stroke-width=\"0.85\"/><path d=\"M226.775,118.296c.2.374.253,1.612.169,3.945-.195,5.435-.774,6.265-4.634,6.645-3.025.298-3.217-.334-1.277-4.203c2.901-5.784,4.884-7.99,5.742-6.387m-28.813,3.742c3.191,2.397,6.823,5.554,7.176,6.238.779,1.507-4.53,1.498-5.735,1.737-3.316.659-5.144-1.705-5.245-6.782-.057-2.847,1.113-3.214,3.804-1.193\" fill=\"rgba(7,5,5,0.94)\" fill-rule=\"evenodd\"/><path d=\"M219.22831,110.396122q.133998,0,18.98119-9.067754l-24.07419,27.574754L210.603,149.625l-12.96769-17.913878\" transform=\"translate(62.11469-42.541762)\" fill=\"#e48117\" stroke=\"rgba(63,87,135,0)\" stroke-width=\"0.85\"/><path d=\"M219.06731,119.541762q.133998,0,19.14219-18.213394l-27.95619,34.757394L210.603,149.625l-5.29469-14.943238\" transform=\"translate(62.11469-42.541762)\" fill=\"#f3a407\" stroke=\"rgba(63,87,135,0)\" stroke-width=\"0.85\"/><path d=\"M112.976,74.594999l-14.545-14.386l17.807,6.447L141.5,85.74419l-10.481,19.525809-4.062-13.707\" transform=\"translate(0 0.000001)\" fill=\"#e48117\" stroke=\"rgba(255,170,15,0)\" stroke-width=\"0.85\"/><path d=\"M119.032,78.146999l-20.601-17.938L122,75.935999L132.447,95.99419l-1.428,9.275809-.705-7.645\" transform=\"translate(0 0.000001)\" fill=\"#f3a407\" stroke=\"rgba(255,170,15,0)\" stroke-width=\"0.85\"/></g>\""
+										},
+										"value": "<g transform=\"translate(0 0.000001)\"><path d=\"M178.881,108l11.322,38.973l6.921-2.539l6.543,20.557l13.833,3.562l3.533-16.508l5.742.565l7.243-63.231-5.486-.314-3.527-23.592-15.6-1.102-6.399,25.008L191.421,78.15l-2.233,30.6-10.307-1.173\" fill=\"#f3a407\" stroke=\"rgba(63,87,135,0)\" stroke-width=\"0.85\"/><path d=\"M181.375,111.946l10.424,32.904l5.047-2.372l5.222001,11.647l1.598999-7.902l8.119,6.387-.737-8.176l11.261,4.814-14.425-24.873l7.848-22.953-6.328-37.051-6.399,25.008L191.421,78.15l-1.025,32.163-7.913-1.256\" fill=\"#e48117\" stroke=\"rgba(63,87,135,0)\" stroke-width=\"0.85\"/><path d=\"M226.775,118.296c.2.374.253,1.612.169,3.945-.195,5.435-.774,6.265-4.634,6.645-3.025.298-3.217-.334-1.277-4.203c2.901-5.784,4.884-7.99,5.742-6.387m-28.813,3.742c3.191,2.397,6.823,5.554,7.176,6.238.779,1.507-4.53,1.498-5.735,1.737-3.316.659-5.144-1.705-5.245-6.782-.057-2.847,1.113-3.214,3.804-1.193\" fill=\"rgba(7,5,5,0.94)\" fill-rule=\"evenodd\"/><path d=\"M219.22831,110.396122q.133998,0,18.98119-9.067754l-24.07419,27.574754L210.603,149.625l-12.96769-17.913878\" transform=\"translate(62.11469-42.541762)\" fill=\"#e48117\" stroke=\"rgba(63,87,135,0)\" stroke-width=\"0.85\"/><path d=\"M219.06731,119.541762q.133998,0,19.14219-18.213394l-27.95619,34.757394L210.603,149.625l-5.29469-14.943238\" transform=\"translate(62.11469-42.541762)\" fill=\"#f3a407\" stroke=\"rgba(63,87,135,0)\" stroke-width=\"0.85\"/><path d=\"M112.976,74.594999l-14.545-14.386l17.807,6.447L141.5,85.74419l-10.481,19.525809-4.062-13.707\" transform=\"translate(0 0.000001)\" fill=\"#e48117\" stroke=\"rgba(255,170,15,0)\" stroke-width=\"0.85\"/><path d=\"M119.032,78.146999l-20.601-17.938L122,75.935999L132.447,95.99419l-1.428,9.275809-.705-7.645\" transform=\"translate(0 0.000001)\" fill=\"#f3a407\" stroke=\"rgba(255,170,15,0)\" stroke-width=\"0.85\"/></g>"
+									},
+									"visibility": "internal"
+								},
+								{
+									"body": {
+										"id": 32,
+										"nodeType": "Block",
+										"src": "2330:134:0",
+										"statements": [
+											{
+												"expression": {
+													"arguments": [
+														{
+															"arguments": [
+																{
+																	"arguments": [
+																		{
+																			"expression": {
+																				"id": 23,
+																				"name": "SVGLib",
+																				"nodeType": "Identifier",
+																				"overloadedDeclarations": [],
+																				"referencedDeclaration": 34,
+																				"src": "2393:6:0",
+																				"typeDescriptions": {
+																					"typeIdentifier": "t_type$_t_contract$_SVGLib_$34_$",
+																					"typeString": "type(library SVGLib)"
+																				}
+																			},
+																			"id": 24,
+																			"isConstant": false,
+																			"isLValue": false,
+																			"isPure": false,
+																			"lValueRequested": false,
+																			"memberName": "svg_Header",
+																			"nodeType": "MemberAccess",
+																			"referencedDeclaration": 4,
+																			"src": "2393:17:0",
+																			"typeDescriptions": {
+																				"typeIdentifier": "t_string_memory_ptr",
+																				"typeString": "string memory"
+																			}
+																		},
+																		{
+																			"id": 25,
+																			"name": "_type",
+																			"nodeType": "Identifier",
+																			"overloadedDeclarations": [],
+																			"referencedDeclaration": 12,
+																			"src": "2412:5:0",
+																			"typeDescriptions": {
+																				"typeIdentifier": "t_uint256",
+																				"typeString": "uint256"
+																			}
+																		},
+																		{
+																			"expression": {
+																				"id": 26,
+																				"name": "SVGLib",
+																				"nodeType": "Identifier",
+																				"overloadedDeclarations": [],
+																				"referencedDeclaration": 34,
+																				"src": "2419:6:0",
+																				"typeDescriptions": {
+																					"typeIdentifier": "t_type$_t_contract$_SVGLib_$34_$",
+																					"typeString": "type(library SVGLib)"
+																				}
+																			},
+																			"id": 27,
+																			"isConstant": false,
+																			"isLValue": false,
+																			"isPure": false,
+																			"lValueRequested": false,
+																			"memberName": "svg_Tail",
+																			"nodeType": "MemberAccess",
+																			"referencedDeclaration": 7,
+																			"src": "2419:15:0",
+																			"typeDescriptions": {
+																				"typeIdentifier": "t_string_memory_ptr",
+																				"typeString": "string memory"
+																			}
+																		}
+																	],
+																	"expression": {
+																		"argumentTypes": [
+																			{
+																				"typeIdentifier": "t_string_memory_ptr",
+																				"typeString": "string memory"
+																			},
+																			{
+																				"typeIdentifier": "t_uint256",
+																				"typeString": "uint256"
+																			},
+																			{
+																				"typeIdentifier": "t_string_memory_ptr",
+																				"typeString": "string memory"
+																			}
+																		],
+																		"expression": {
+																			"id": 21,
+																			"name": "abi",
+																			"nodeType": "Identifier",
+																			"overloadedDeclarations": [],
+																			"referencedDeclaration": 4294967295,
+																			"src": "2376:3:0",
+																			"typeDescriptions": {
+																				"typeIdentifier": "t_magic_abi",
+																				"typeString": "abi"
+																			}
+																		},
+																		"id": 22,
+																		"isConstant": false,
+																		"isLValue": false,
+																		"isPure": true,
+																		"lValueRequested": false,
+																		"memberName": "encodePacked",
+																		"nodeType": "MemberAccess",
+																		"src": "2376:16:0",
+																		"typeDescriptions": {
+																			"typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+																			"typeString": "function () pure returns (bytes memory)"
+																		}
+																	},
+																	"id": 28,
+																	"isConstant": false,
+																	"isLValue": false,
+																	"isPure": false,
+																	"kind": "functionCall",
+																	"lValueRequested": false,
+																	"names": [],
+																	"nodeType": "FunctionCall",
+																	"src": "2376:59:0",
+																	"tryCall": false,
+																	"typeDescriptions": {
+																		"typeIdentifier": "t_bytes_memory_ptr",
+																		"typeString": "bytes memory"
+																	}
+																}
+															],
+															"expression": {
+																"argumentTypes": [
+																	{
+																		"typeIdentifier": "t_bytes_memory_ptr",
+																		"typeString": "bytes memory"
+																	}
+																],
+																"id": 20,
+																"isConstant": false,
+																"isLValue": false,
+																"isPure": true,
+																"lValueRequested": false,
+																"nodeType": "ElementaryTypeNameExpression",
+																"src": "2369:6:0",
+																"typeDescriptions": {
+																	"typeIdentifier": "t_type$_t_string_storage_ptr_$",
+																	"typeString": "type(string storage pointer)"
+																},
+																"typeName": {
+																	"id": 19,
+																	"name": "string",
+																	"nodeType": "ElementaryTypeName",
+																	"src": "2369:6:0",
+																	"typeDescriptions": {}
+																}
+															},
+															"id": 29,
+															"isConstant": false,
+															"isLValue": false,
+															"isPure": false,
+															"kind": "typeConversion",
+															"lValueRequested": false,
+															"names": [],
+															"nodeType": "FunctionCall",
+															"src": "2369:67:0",
+															"tryCall": false,
+															"typeDescriptions": {
+																"typeIdentifier": "t_string_memory_ptr",
+																"typeString": "string memory"
+															}
+														}
+													],
+													"expression": {
+														"argumentTypes": [
+															{
+																"typeIdentifier": "t_string_memory_ptr",
+																"typeString": "string memory"
+															}
+														],
+														"id": 18,
+														"isConstant": false,
+														"isLValue": false,
+														"isPure": true,
+														"lValueRequested": false,
+														"nodeType": "ElementaryTypeNameExpression",
+														"src": "2363:5:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_type$_t_bytes_storage_ptr_$",
+															"typeString": "type(bytes storage pointer)"
+														},
+														"typeName": {
+															"id": 17,
+															"name": "bytes",
+															"nodeType": "ElementaryTypeName",
+															"src": "2363:5:0",
+															"typeDescriptions": {}
+														}
+													},
+													"id": 30,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"kind": "typeConversion",
+													"lValueRequested": false,
+													"names": [],
+													"nodeType": "FunctionCall",
+													"src": "2363:74:0",
+													"tryCall": false,
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes_memory_ptr",
+														"typeString": "bytes memory"
+													}
+												},
+												"functionReturnParameters": 16,
+												"id": 31,
+												"nodeType": "Return",
+												"src": "2356:81:0"
+											}
+										]
+									},
+									"id": 33,
+									"implemented": true,
+									"kind": "function",
+									"modifiers": [],
+									"name": "assembleString",
+									"nameLocation": "2253:14:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 13,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 12,
+												"mutability": "mutable",
+												"name": "_type",
+												"nameLocation": "2276:5:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 33,
+												"src": "2268:13:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 11,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "2268:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "2267:15:0"
+									},
+									"returnParameters": {
+										"id": 16,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 15,
+												"mutability": "mutable",
+												"name": "svg_Result",
+												"nameLocation": "2319:10:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 33,
+												"src": "2306:23:0",
+												"stateVariable": false,
+												"storageLocation": "memory",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes_memory_ptr",
+													"typeString": "bytes"
+												},
+												"typeName": {
+													"id": 14,
+													"name": "bytes",
+													"nodeType": "ElementaryTypeName",
+													"src": "2306:5:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes_storage_ptr",
+														"typeString": "bytes"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "2305:25:0"
+									},
+									"scope": 34,
+									"src": "2244:220:0",
+									"stateMutability": "pure",
+									"virtual": false,
+									"visibility": "internal"
+								}
+							],
+							"scope": 35,
+							"src": "66:2401:0",
+							"usedErrors": []
+						}
+					],
+					"src": "37:2432:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

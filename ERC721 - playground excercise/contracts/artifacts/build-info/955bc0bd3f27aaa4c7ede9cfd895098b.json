@@ -1,0 +1,1299 @@
+{
+	"id": "955bc0bd3f27aaa4c7ede9cfd895098b",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/SVGLib.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\n\r\n\r\npragma solidity ^0.8.0;\r\n\r\n\r\nlibrary SVGLib {\r\n    string internal  constant svg_Header = \r\n        '<svg id=\"elfbOpLEU5j1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 400 425\" shape-rendering=\"geometricPrecision\" text-rendering=\"geometricPrecision\">';\r\n    string internal constant svg_Tail = '</svg>';\r\n    string internal constant svg_Type_1 =\r\n        '<rect stroke=\"#000\" id=\"svg_10\" height=\"400\" width=\"402\" y=\"-0.00001\" x=\"0.00001\" fill=\"#1fff\"/>';   \r\n    string internal constant svg_Type_2 =\r\n        '<rect stroke=\"#000\" id=\"svg_10\" height=\"400\" width=\"402\" y=\"-0.00001\" x=\"0.00001\" fill=\"#0fffff\"/>';   \r\n    string internal constant svg_Type_3 =\r\n        '<rect stroke=\"#000\" id=\"svg_10\" height=\"400\" width=\"402\" y=\"-0.00001\" x=\"0.00001\" fill=\"#ff0000\"/>';    \r\n   \r\n    function assembleString(uint256 _type) internal pure returns (bytes memory svg_Result){\r\n            \r\n            string memory svg_Type;\r\n            if (_type == 1){\r\n                svg_Type = svg_Type_1;\r\n            }\r\n             if (_type == 2){\r\n                svg_Type = svg_Type_2;\r\n            }\r\n             if (_type == 3){\r\n                svg_Type = svg_Type_3;\r\n            }\r\n            \r\n            return bytes(string(abi.encodePacked(SVGLib.svg_Header, svg_Type, SVGLib.svg_Tail))); \r\n      \r\n        \r\n    }\r\n}\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/SVGLib.sol": {
+				"SVGLib": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"contracts/SVGLib.sol\":66:1405  library SVGLib {\r... */\n  dataSize(sub_0)\n  dataOffset(sub_0)\n  0x0b\n  dup3\n  dup3\n  dup3\n  codecopy\n  dup1\n  mload\n  0x00\n  byte\n  0x73\n  eq\n  tag_1\n  jumpi\n  mstore(0x00, 0x4e487b7100000000000000000000000000000000000000000000000000000000)\n  mstore(0x04, 0x00)\n  revert(0x00, 0x24)\ntag_1:\n  mstore(0x00, address)\n  0x73\n  dup2\n  mstore8\n  dup3\n  dup2\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/SVGLib.sol\":66:1405  library SVGLib {\r... */\n      eq(address, deployTimeAddress())\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa2646970667358221220f272b1d8808432fecf6ca2cafb1d0051b18fa79104307011a7a6a417d25f9bc364736f6c63430008070033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "60566050600b82828239805160001a6073146043577f4e487b7100000000000000000000000000000000000000000000000000000000600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220f272b1d8808432fecf6ca2cafb1d0051b18fa79104307011a7a6a417d25f9bc364736f6c63430008070033",
+							"opcodes": "PUSH1 0x56 PUSH1 0x50 PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH1 0x0 BYTE PUSH1 0x73 EQ PUSH1 0x43 JUMPI PUSH32 0x4E487B7100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 MSTORE PUSH1 0x0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST ADDRESS PUSH1 0x0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 CALLCODE PUSH19 0xB1D8808432FECF6CA2CAFB1D0051B18FA79104 ADDRESS PUSH17 0x11A7A6A417D25F9BC364736F6C63430008 SMOD STOP CALLER ",
+							"sourceMap": "66:1339:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220f272b1d8808432fecf6ca2cafb1d0051b18fa79104307011a7a6a417d25f9bc364736f6c63430008070033",
+							"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 CALLCODE PUSH19 0xB1D8808432FECF6CA2CAFB1D0051B18FA79104 ADDRESS PUSH17 0x11A7A6A417D25F9BC364736F6C63430008 SMOD STOP CALLER ",
+							"sourceMap": "66:1339:0:-:0;;;;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "17200",
+								"executionCost": "97",
+								"totalCost": "17297"
+							},
+							"internal": {
+								"assembleString(uint256)": "infinite"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "PUSH",
+									"source": 0,
+									"value": "B"
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "MLOAD",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "BYTE",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "PUSH",
+									"source": 0,
+									"value": "73"
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "EQ",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "PUSH",
+									"source": 0,
+									"value": "4E487B7100000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "PUSH",
+									"source": 0,
+									"value": "4"
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "PUSH",
+									"source": 0,
+									"value": "24"
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "ADDRESS",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "PUSH",
+									"source": 0,
+									"value": "73"
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "MSTORE8",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1405,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a2646970667358221220f272b1d8808432fecf6ca2cafb1d0051b18fa79104307011a7a6a417d25f9bc364736f6c63430008070033",
+									".code": [
+										{
+											"begin": 66,
+											"end": 1405,
+											"name": "PUSHDEPLOYADDRESS",
+											"source": 0
+										},
+										{
+											"begin": 66,
+											"end": 1405,
+											"name": "ADDRESS",
+											"source": 0
+										},
+										{
+											"begin": 66,
+											"end": 1405,
+											"name": "EQ",
+											"source": 0
+										},
+										{
+											"begin": 66,
+											"end": 1405,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 66,
+											"end": 1405,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 66,
+											"end": 1405,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 66,
+											"end": 1405,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 66,
+											"end": 1405,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 66,
+											"end": 1405,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/SVGLib.sol\":\"SVGLib\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/SVGLib.sol\":{\"keccak256\":\"0xf88c624cc2e91f7fcf95b5d2f6dab8b680c2af3e5a418d7e20dfce673aed4a46\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c8844f0832a46ecaec5deff968f761d69d76d7cdb49381e8009f575bfabdfd1e\",\"dweb:/ipfs/QmcheSCqrYeXy3hRkJgrgc5hsoFfsyDX4ZuD4QYD2mVawu\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/SVGLib.sol": {
+				"ast": {
+					"absolutePath": "contracts/SVGLib.sol",
+					"exportedSymbols": {
+						"SVGLib": [
+							70
+						]
+					},
+					"id": 71,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "37:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "library",
+							"fullyImplemented": true,
+							"id": 70,
+							"linearizedBaseContracts": [
+								70
+							],
+							"name": "SVGLib",
+							"nameLocation": "74:6:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"constant": true,
+									"id": 4,
+									"mutability": "constant",
+									"name": "svg_Header",
+									"nameLocation": "114:10:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 70,
+									"src": "88:247:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_string_memory_ptr",
+										"typeString": "string"
+									},
+									"typeName": {
+										"id": 2,
+										"name": "string",
+										"nodeType": "ElementaryTypeName",
+										"src": "88:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_string_storage_ptr",
+											"typeString": "string"
+										}
+									},
+									"value": {
+										"hexValue": "3c7376672069643d22656c66624f704c4555356a312220786d6c6e733d22687474703a2f2f7777772e77332e6f72672f323030302f7376672220786d6c6e733a786c696e6b3d22687474703a2f2f7777772e77332e6f72672f313939392f786c696e6b222076696577426f783d223020302034303020343235222073686170652d72656e646572696e673d2267656f6d6574726963507265636973696f6e2220746578742d72656e646572696e673d2267656f6d6574726963507265636973696f6e223e",
+										"id": 3,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "string",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "137:198:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_stringliteral_104ac35b9c7d59e6f5df45042c2490beb66a44ca7e8777a78ed8100227a8ffc5",
+											"typeString": "literal_string \"<svg id=\"elfbOpLEU5j1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 400 425\" shape-rendering=\"geometricPrecision\" text-rendering=\"geometricPrecision\">\""
+										},
+										"value": "<svg id=\"elfbOpLEU5j1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 400 425\" shape-rendering=\"geometricPrecision\" text-rendering=\"geometricPrecision\">"
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": true,
+									"id": 7,
+									"mutability": "constant",
+									"name": "svg_Tail",
+									"nameLocation": "367:8:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 70,
+									"src": "342:44:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_string_memory_ptr",
+										"typeString": "string"
+									},
+									"typeName": {
+										"id": 5,
+										"name": "string",
+										"nodeType": "ElementaryTypeName",
+										"src": "342:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_string_storage_ptr",
+											"typeString": "string"
+										}
+									},
+									"value": {
+										"hexValue": "3c2f7376673e",
+										"id": 6,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "string",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "378:8:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_stringliteral_ed942a74eccce931b7661b37252dffca8561e3a8bdec86f6da31d97d858c9292",
+											"typeString": "literal_string \"</svg>\""
+										},
+										"value": "</svg>"
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": true,
+									"id": 10,
+									"mutability": "constant",
+									"name": "svg_Type_1",
+									"nameLocation": "418:10:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 70,
+									"src": "393:145:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_string_memory_ptr",
+										"typeString": "string"
+									},
+									"typeName": {
+										"id": 8,
+										"name": "string",
+										"nodeType": "ElementaryTypeName",
+										"src": "393:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_string_storage_ptr",
+											"typeString": "string"
+										}
+									},
+									"value": {
+										"hexValue": "3c72656374207374726f6b653d2223303030222069643d227376675f313022206865696768743d22343030222077696474683d223430322220793d222d302e30303030312220783d22302e3030303031222066696c6c3d222331666666222f3e",
+										"id": 9,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "string",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "440:98:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_stringliteral_d1ad6b4664caa08e7a5810e92d91c48896d287f851c9163b028c6c61afaa5896",
+											"typeString": "literal_string \"<rect stroke=\"#000\" id=\"svg_10\" height=\"400\" width=\"402\" y=\"-0.00001\" x=\"0.00001\" fill=\"#1fff\"/>\""
+										},
+										"value": "<rect stroke=\"#000\" id=\"svg_10\" height=\"400\" width=\"402\" y=\"-0.00001\" x=\"0.00001\" fill=\"#1fff\"/>"
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": true,
+									"id": 13,
+									"mutability": "constant",
+									"name": "svg_Type_2",
+									"nameLocation": "573:10:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 70,
+									"src": "548:147:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_string_memory_ptr",
+										"typeString": "string"
+									},
+									"typeName": {
+										"id": 11,
+										"name": "string",
+										"nodeType": "ElementaryTypeName",
+										"src": "548:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_string_storage_ptr",
+											"typeString": "string"
+										}
+									},
+									"value": {
+										"hexValue": "3c72656374207374726f6b653d2223303030222069643d227376675f313022206865696768743d22343030222077696474683d223430322220793d222d302e30303030312220783d22302e3030303031222066696c6c3d2223306666666666222f3e",
+										"id": 12,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "string",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "595:100:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_stringliteral_5478960ff8e3db8a8893f84bbbd4f974f517fbad908ffbb045efb3eddd1187d7",
+											"typeString": "literal_string \"<rect stroke=\"#000\" id=\"svg_10\" height=\"400\" width=\"402\" y=\"-0.00001\" x=\"0.00001\" fill=\"#0fffff\"/>\""
+										},
+										"value": "<rect stroke=\"#000\" id=\"svg_10\" height=\"400\" width=\"402\" y=\"-0.00001\" x=\"0.00001\" fill=\"#0fffff\"/>"
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": true,
+									"id": 16,
+									"mutability": "constant",
+									"name": "svg_Type_3",
+									"nameLocation": "730:10:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 70,
+									"src": "705:147:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_string_memory_ptr",
+										"typeString": "string"
+									},
+									"typeName": {
+										"id": 14,
+										"name": "string",
+										"nodeType": "ElementaryTypeName",
+										"src": "705:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_string_storage_ptr",
+											"typeString": "string"
+										}
+									},
+									"value": {
+										"hexValue": "3c72656374207374726f6b653d2223303030222069643d227376675f313022206865696768743d22343030222077696474683d223430322220793d222d302e30303030312220783d22302e3030303031222066696c6c3d2223666630303030222f3e",
+										"id": 15,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "string",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "752:100:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_stringliteral_cd1201579beb002639bee21b5b1f04eb728a7c91ceeca07b6770d469712f2c27",
+											"typeString": "literal_string \"<rect stroke=\"#000\" id=\"svg_10\" height=\"400\" width=\"402\" y=\"-0.00001\" x=\"0.00001\" fill=\"#ff0000\"/>\""
+										},
+										"value": "<rect stroke=\"#000\" id=\"svg_10\" height=\"400\" width=\"402\" y=\"-0.00001\" x=\"0.00001\" fill=\"#ff0000\"/>"
+									},
+									"visibility": "internal"
+								},
+								{
+									"body": {
+										"id": 68,
+										"nodeType": "Block",
+										"src": "954:448:0",
+										"statements": [
+											{
+												"assignments": [
+													24
+												],
+												"declarations": [
+													{
+														"constant": false,
+														"id": 24,
+														"mutability": "mutable",
+														"name": "svg_Type",
+														"nameLocation": "997:8:0",
+														"nodeType": "VariableDeclaration",
+														"scope": 68,
+														"src": "983:22:0",
+														"stateVariable": false,
+														"storageLocation": "memory",
+														"typeDescriptions": {
+															"typeIdentifier": "t_string_memory_ptr",
+															"typeString": "string"
+														},
+														"typeName": {
+															"id": 23,
+															"name": "string",
+															"nodeType": "ElementaryTypeName",
+															"src": "983:6:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_string_storage_ptr",
+																"typeString": "string"
+															}
+														},
+														"visibility": "internal"
+													}
+												],
+												"id": 25,
+												"nodeType": "VariableDeclarationStatement",
+												"src": "983:22:0"
+											},
+											{
+												"condition": {
+													"commonType": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													},
+													"id": 28,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"lValueRequested": false,
+													"leftExpression": {
+														"id": 26,
+														"name": "_type",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [],
+														"referencedDeclaration": 18,
+														"src": "1024:5:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_uint256",
+															"typeString": "uint256"
+														}
+													},
+													"nodeType": "BinaryOperation",
+													"operator": "==",
+													"rightExpression": {
+														"hexValue": "31",
+														"id": 27,
+														"isConstant": false,
+														"isLValue": false,
+														"isPure": true,
+														"kind": "number",
+														"lValueRequested": false,
+														"nodeType": "Literal",
+														"src": "1033:1:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_rational_1_by_1",
+															"typeString": "int_const 1"
+														},
+														"value": "1"
+													},
+													"src": "1024:10:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bool",
+														"typeString": "bool"
+													}
+												},
+												"id": 34,
+												"nodeType": "IfStatement",
+												"src": "1020:71:0",
+												"trueBody": {
+													"id": 33,
+													"nodeType": "Block",
+													"src": "1035:56:0",
+													"statements": [
+														{
+															"expression": {
+																"id": 31,
+																"isConstant": false,
+																"isLValue": false,
+																"isPure": false,
+																"lValueRequested": false,
+																"leftHandSide": {
+																	"id": 29,
+																	"name": "svg_Type",
+																	"nodeType": "Identifier",
+																	"overloadedDeclarations": [],
+																	"referencedDeclaration": 24,
+																	"src": "1054:8:0",
+																	"typeDescriptions": {
+																		"typeIdentifier": "t_string_memory_ptr",
+																		"typeString": "string memory"
+																	}
+																},
+																"nodeType": "Assignment",
+																"operator": "=",
+																"rightHandSide": {
+																	"id": 30,
+																	"name": "svg_Type_1",
+																	"nodeType": "Identifier",
+																	"overloadedDeclarations": [],
+																	"referencedDeclaration": 10,
+																	"src": "1065:10:0",
+																	"typeDescriptions": {
+																		"typeIdentifier": "t_string_memory_ptr",
+																		"typeString": "string memory"
+																	}
+																},
+																"src": "1054:21:0",
+																"typeDescriptions": {
+																	"typeIdentifier": "t_string_memory_ptr",
+																	"typeString": "string memory"
+																}
+															},
+															"id": 32,
+															"nodeType": "ExpressionStatement",
+															"src": "1054:21:0"
+														}
+													]
+												}
+											},
+											{
+												"condition": {
+													"commonType": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													},
+													"id": 37,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"lValueRequested": false,
+													"leftExpression": {
+														"id": 35,
+														"name": "_type",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [],
+														"referencedDeclaration": 18,
+														"src": "1110:5:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_uint256",
+															"typeString": "uint256"
+														}
+													},
+													"nodeType": "BinaryOperation",
+													"operator": "==",
+													"rightExpression": {
+														"hexValue": "32",
+														"id": 36,
+														"isConstant": false,
+														"isLValue": false,
+														"isPure": true,
+														"kind": "number",
+														"lValueRequested": false,
+														"nodeType": "Literal",
+														"src": "1119:1:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_rational_2_by_1",
+															"typeString": "int_const 2"
+														},
+														"value": "2"
+													},
+													"src": "1110:10:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bool",
+														"typeString": "bool"
+													}
+												},
+												"id": 43,
+												"nodeType": "IfStatement",
+												"src": "1106:71:0",
+												"trueBody": {
+													"id": 42,
+													"nodeType": "Block",
+													"src": "1121:56:0",
+													"statements": [
+														{
+															"expression": {
+																"id": 40,
+																"isConstant": false,
+																"isLValue": false,
+																"isPure": false,
+																"lValueRequested": false,
+																"leftHandSide": {
+																	"id": 38,
+																	"name": "svg_Type",
+																	"nodeType": "Identifier",
+																	"overloadedDeclarations": [],
+																	"referencedDeclaration": 24,
+																	"src": "1140:8:0",
+																	"typeDescriptions": {
+																		"typeIdentifier": "t_string_memory_ptr",
+																		"typeString": "string memory"
+																	}
+																},
+																"nodeType": "Assignment",
+																"operator": "=",
+																"rightHandSide": {
+																	"id": 39,
+																	"name": "svg_Type_2",
+																	"nodeType": "Identifier",
+																	"overloadedDeclarations": [],
+																	"referencedDeclaration": 13,
+																	"src": "1151:10:0",
+																	"typeDescriptions": {
+																		"typeIdentifier": "t_string_memory_ptr",
+																		"typeString": "string memory"
+																	}
+																},
+																"src": "1140:21:0",
+																"typeDescriptions": {
+																	"typeIdentifier": "t_string_memory_ptr",
+																	"typeString": "string memory"
+																}
+															},
+															"id": 41,
+															"nodeType": "ExpressionStatement",
+															"src": "1140:21:0"
+														}
+													]
+												}
+											},
+											{
+												"condition": {
+													"commonType": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													},
+													"id": 46,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"lValueRequested": false,
+													"leftExpression": {
+														"id": 44,
+														"name": "_type",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [],
+														"referencedDeclaration": 18,
+														"src": "1196:5:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_uint256",
+															"typeString": "uint256"
+														}
+													},
+													"nodeType": "BinaryOperation",
+													"operator": "==",
+													"rightExpression": {
+														"hexValue": "33",
+														"id": 45,
+														"isConstant": false,
+														"isLValue": false,
+														"isPure": true,
+														"kind": "number",
+														"lValueRequested": false,
+														"nodeType": "Literal",
+														"src": "1205:1:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_rational_3_by_1",
+															"typeString": "int_const 3"
+														},
+														"value": "3"
+													},
+													"src": "1196:10:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bool",
+														"typeString": "bool"
+													}
+												},
+												"id": 52,
+												"nodeType": "IfStatement",
+												"src": "1192:71:0",
+												"trueBody": {
+													"id": 51,
+													"nodeType": "Block",
+													"src": "1207:56:0",
+													"statements": [
+														{
+															"expression": {
+																"id": 49,
+																"isConstant": false,
+																"isLValue": false,
+																"isPure": false,
+																"lValueRequested": false,
+																"leftHandSide": {
+																	"id": 47,
+																	"name": "svg_Type",
+																	"nodeType": "Identifier",
+																	"overloadedDeclarations": [],
+																	"referencedDeclaration": 24,
+																	"src": "1226:8:0",
+																	"typeDescriptions": {
+																		"typeIdentifier": "t_string_memory_ptr",
+																		"typeString": "string memory"
+																	}
+																},
+																"nodeType": "Assignment",
+																"operator": "=",
+																"rightHandSide": {
+																	"id": 48,
+																	"name": "svg_Type_3",
+																	"nodeType": "Identifier",
+																	"overloadedDeclarations": [],
+																	"referencedDeclaration": 16,
+																	"src": "1237:10:0",
+																	"typeDescriptions": {
+																		"typeIdentifier": "t_string_memory_ptr",
+																		"typeString": "string memory"
+																	}
+																},
+																"src": "1226:21:0",
+																"typeDescriptions": {
+																	"typeIdentifier": "t_string_memory_ptr",
+																	"typeString": "string memory"
+																}
+															},
+															"id": 50,
+															"nodeType": "ExpressionStatement",
+															"src": "1226:21:0"
+														}
+													]
+												}
+											},
+											{
+												"expression": {
+													"arguments": [
+														{
+															"arguments": [
+																{
+																	"arguments": [
+																		{
+																			"expression": {
+																				"id": 59,
+																				"name": "SVGLib",
+																				"nodeType": "Identifier",
+																				"overloadedDeclarations": [],
+																				"referencedDeclaration": 70,
+																				"src": "1328:6:0",
+																				"typeDescriptions": {
+																					"typeIdentifier": "t_type$_t_contract$_SVGLib_$70_$",
+																					"typeString": "type(library SVGLib)"
+																				}
+																			},
+																			"id": 60,
+																			"isConstant": false,
+																			"isLValue": false,
+																			"isPure": false,
+																			"lValueRequested": false,
+																			"memberName": "svg_Header",
+																			"nodeType": "MemberAccess",
+																			"referencedDeclaration": 4,
+																			"src": "1328:17:0",
+																			"typeDescriptions": {
+																				"typeIdentifier": "t_string_memory_ptr",
+																				"typeString": "string memory"
+																			}
+																		},
+																		{
+																			"id": 61,
+																			"name": "svg_Type",
+																			"nodeType": "Identifier",
+																			"overloadedDeclarations": [],
+																			"referencedDeclaration": 24,
+																			"src": "1347:8:0",
+																			"typeDescriptions": {
+																				"typeIdentifier": "t_string_memory_ptr",
+																				"typeString": "string memory"
+																			}
+																		},
+																		{
+																			"expression": {
+																				"id": 62,
+																				"name": "SVGLib",
+																				"nodeType": "Identifier",
+																				"overloadedDeclarations": [],
+																				"referencedDeclaration": 70,
+																				"src": "1357:6:0",
+																				"typeDescriptions": {
+																					"typeIdentifier": "t_type$_t_contract$_SVGLib_$70_$",
+																					"typeString": "type(library SVGLib)"
+																				}
+																			},
+																			"id": 63,
+																			"isConstant": false,
+																			"isLValue": false,
+																			"isPure": false,
+																			"lValueRequested": false,
+																			"memberName": "svg_Tail",
+																			"nodeType": "MemberAccess",
+																			"referencedDeclaration": 7,
+																			"src": "1357:15:0",
+																			"typeDescriptions": {
+																				"typeIdentifier": "t_string_memory_ptr",
+																				"typeString": "string memory"
+																			}
+																		}
+																	],
+																	"expression": {
+																		"argumentTypes": [
+																			{
+																				"typeIdentifier": "t_string_memory_ptr",
+																				"typeString": "string memory"
+																			},
+																			{
+																				"typeIdentifier": "t_string_memory_ptr",
+																				"typeString": "string memory"
+																			},
+																			{
+																				"typeIdentifier": "t_string_memory_ptr",
+																				"typeString": "string memory"
+																			}
+																		],
+																		"expression": {
+																			"id": 57,
+																			"name": "abi",
+																			"nodeType": "Identifier",
+																			"overloadedDeclarations": [],
+																			"referencedDeclaration": 4294967295,
+																			"src": "1311:3:0",
+																			"typeDescriptions": {
+																				"typeIdentifier": "t_magic_abi",
+																				"typeString": "abi"
+																			}
+																		},
+																		"id": 58,
+																		"isConstant": false,
+																		"isLValue": false,
+																		"isPure": true,
+																		"lValueRequested": false,
+																		"memberName": "encodePacked",
+																		"nodeType": "MemberAccess",
+																		"src": "1311:16:0",
+																		"typeDescriptions": {
+																			"typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+																			"typeString": "function () pure returns (bytes memory)"
+																		}
+																	},
+																	"id": 64,
+																	"isConstant": false,
+																	"isLValue": false,
+																	"isPure": false,
+																	"kind": "functionCall",
+																	"lValueRequested": false,
+																	"names": [],
+																	"nodeType": "FunctionCall",
+																	"src": "1311:62:0",
+																	"tryCall": false,
+																	"typeDescriptions": {
+																		"typeIdentifier": "t_bytes_memory_ptr",
+																		"typeString": "bytes memory"
+																	}
+																}
+															],
+															"expression": {
+																"argumentTypes": [
+																	{
+																		"typeIdentifier": "t_bytes_memory_ptr",
+																		"typeString": "bytes memory"
+																	}
+																],
+																"id": 56,
+																"isConstant": false,
+																"isLValue": false,
+																"isPure": true,
+																"lValueRequested": false,
+																"nodeType": "ElementaryTypeNameExpression",
+																"src": "1304:6:0",
+																"typeDescriptions": {
+																	"typeIdentifier": "t_type$_t_string_storage_ptr_$",
+																	"typeString": "type(string storage pointer)"
+																},
+																"typeName": {
+																	"id": 55,
+																	"name": "string",
+																	"nodeType": "ElementaryTypeName",
+																	"src": "1304:6:0",
+																	"typeDescriptions": {}
+																}
+															},
+															"id": 65,
+															"isConstant": false,
+															"isLValue": false,
+															"isPure": false,
+															"kind": "typeConversion",
+															"lValueRequested": false,
+															"names": [],
+															"nodeType": "FunctionCall",
+															"src": "1304:70:0",
+															"tryCall": false,
+															"typeDescriptions": {
+																"typeIdentifier": "t_string_memory_ptr",
+																"typeString": "string memory"
+															}
+														}
+													],
+													"expression": {
+														"argumentTypes": [
+															{
+																"typeIdentifier": "t_string_memory_ptr",
+																"typeString": "string memory"
+															}
+														],
+														"id": 54,
+														"isConstant": false,
+														"isLValue": false,
+														"isPure": true,
+														"lValueRequested": false,
+														"nodeType": "ElementaryTypeNameExpression",
+														"src": "1298:5:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_type$_t_bytes_storage_ptr_$",
+															"typeString": "type(bytes storage pointer)"
+														},
+														"typeName": {
+															"id": 53,
+															"name": "bytes",
+															"nodeType": "ElementaryTypeName",
+															"src": "1298:5:0",
+															"typeDescriptions": {}
+														}
+													},
+													"id": 66,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"kind": "typeConversion",
+													"lValueRequested": false,
+													"names": [],
+													"nodeType": "FunctionCall",
+													"src": "1298:77:0",
+													"tryCall": false,
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes_memory_ptr",
+														"typeString": "bytes memory"
+													}
+												},
+												"functionReturnParameters": 22,
+												"id": 67,
+												"nodeType": "Return",
+												"src": "1291:84:0"
+											}
+										]
+									},
+									"id": 69,
+									"implemented": true,
+									"kind": "function",
+									"modifiers": [],
+									"name": "assembleString",
+									"nameLocation": "877:14:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 19,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 18,
+												"mutability": "mutable",
+												"name": "_type",
+												"nameLocation": "900:5:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 69,
+												"src": "892:13:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 17,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "892:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "891:15:0"
+									},
+									"returnParameters": {
+										"id": 22,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 21,
+												"mutability": "mutable",
+												"name": "svg_Result",
+												"nameLocation": "943:10:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 69,
+												"src": "930:23:0",
+												"stateVariable": false,
+												"storageLocation": "memory",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes_memory_ptr",
+													"typeString": "bytes"
+												},
+												"typeName": {
+													"id": 20,
+													"name": "bytes",
+													"nodeType": "ElementaryTypeName",
+													"src": "930:5:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes_storage_ptr",
+														"typeString": "bytes"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "929:25:0"
+									},
+									"scope": 70,
+									"src": "868:534:0",
+									"stateMutability": "pure",
+									"virtual": false,
+									"visibility": "internal"
+								}
+							],
+							"scope": 71,
+							"src": "66:1339:0",
+							"usedErrors": []
+						}
+					],
+					"src": "37:1370:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

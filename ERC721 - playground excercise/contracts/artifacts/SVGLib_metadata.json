@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SVGLib.sol": "SVGLib"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SVGLib.sol": {
+			"keccak256": "0xf88c624cc2e91f7fcf95b5d2f6dab8b680c2af3e5a418d7e20dfce673aed4a46",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c8844f0832a46ecaec5deff968f761d69d76d7cdb49381e8009f575bfabdfd1e",
+				"dweb:/ipfs/QmcheSCqrYeXy3hRkJgrgc5hsoFfsyDX4ZuD4QYD2mVawu"
+			]
+		}
+	},
+	"version": 1
+}
